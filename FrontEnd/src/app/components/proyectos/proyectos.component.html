@@ -1,10 +1,73 @@
-<div class="row">
-    <h1>Proyectos Realizados</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7">
-            <h1>proyecto</h1>
-            <p>texto</p>
-
+<div class="conteiner">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="title">
+                <h1>Proyectos</h1>
+            </div>
+        </div>
+    </div>
+    <div id="proyecto" class="row" *ngFor="let Proyectos of proyecto">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                <h3>{{Proyectos.nombre}}</h3>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-6 col-lg-7">
+                <div class="descripcion">
+                    <p>{{Proyectos.descripcion}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <div class="botones">
+                    <button class="btn btn-outline-success" routerLink="/editproyecto/{{Proyectos.id}}" *ngIf="isLogged">
+                        <i class="bi bi-pencil-square"></i>EDITAR
+                    </button>
+                    <button class="btn btn-outline-danger" (click)="delete(Proyectos.id)" *ngIf="isLogged">
+                        <i class="bi bi-trash2-fill"></i>BORRAR
+                    </button>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="nuevo">
+            <button type="button" class="btn btn-outline-success" routerLink="/nuevoproyecto" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i>
+                Agregar un nuevo proyecto
+            </button>
         </div>
     </div>
 </div>
+<!--
+<div class="conteiner">
+    <div class="row">
+        <div class="title">
+            <h1>Proyectos Realizados</h1>
+        </div>
+        
+
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Proyectos of proyecto">
+                        <td><h5>{{Proyectos.nombre}}</h5></td>
+                        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <img src={{Proyectos?.img}} class="img-fluid" id="fotoProyectoId">
+                        </div>
+                        <td>{{Proyectos.descripcion}}</td>
+                        <td *ngIf="isLogged"><button class="btn btn-outline-success" routerLink="/editproyecto/{{Proyectos.id}}">
+                            <i class="bi bi-pencil-square"></i>EDITAR
+                        </button></td>
+                        <td *ngIf="isLogged"><button class="btn btn-outline-danger" (click)="delete(Proyectos.id)">
+                            <i class="bi bi-trash2-fill"></i>BORRAR
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="Nuevo">
+            <button type="button" class="btn btn-outline-success" routerLink="/nuevoproyecto" *ngIf="isLogged"><i class="bi bi-textarea-t"></i>
+                Nuevo Proyecto
+            </button>
+        </div>
+    </div>
+</div>
+*/
+-->

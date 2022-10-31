@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    transition: 0.5s;
 }
 div{
     background-color: black;
@@ -14,4 +15,11 @@ div{
 }
 img{
     width: 50px;
+    margin: 5px;
 }
+.btn{
+    box-shadow: 0 0 5px rgb(255, 255, 255),0 0 10px rgb(255, 255, 255);
+    margin: 4px;
+    padding: 4px;
+}
+

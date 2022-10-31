@@ -14,7 +14,21 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component'
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule} from '@angular/forms'
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExpComponent } from './components/experiencia/new-exp.component';
+import { EditExpComponent } from './components/experiencia/edit-exp.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { EditHabilidadesComponent } from './components/habilidades/edit-habilidades.component';
+import { NewHabilidadesComponent } from './components/habilidades/new-habilidades.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -28,15 +42,29 @@ import { LoginComponent } from './components/login/login.component'
     ProyectosComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewExpComponent,
+    EditExpComponent,
+    NeweducacionComponent,
+    EditEducacionComponent,
+    EditHabilidadesComponent,
+    NewHabilidadesComponent,
+    EditAcercaDeComponent,
+    NewProyectosComponent,
+    EditProyectosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

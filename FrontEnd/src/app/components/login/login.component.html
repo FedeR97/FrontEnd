@@ -1,22 +1,26 @@
-<div class="wrapper">
-    <div class="logo">
-        <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
-    </div>
-    <div class="text-center mt-4 name">
-        Portfolio
-    </div>
-    <form class="p-3 mt-3">
-        <div class="form-field d-flex align-items-center">
-            <span class="far fa-user"></span>
-            <input type="text" name="userName" id="userName" placeholder="Username">
+<div class="contenedor">
+    <div class="wrapper">
+        <div class="logo">
+            <img src="../../../assets/Login.png" alt="">
         </div>
-        <div class="form-field d-flex align-items-center">
-            <span class="fas fa-key"></span>
-            <input type="password" name="password" id="pwd" placeholder="Password">
+        <div class="text-center mt-4 name">
+            Portfolio
         </div>
-        <button class="btn mt-3">Login</button>
-    </form>
-    <div class="text-center fs-6">
-        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+        
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Username" [(ngModel)]="nombreUsuario" required>
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" id="password" placeholder="password" [(ngModel)]="password" required>
+            </div>
+            <button class="btn mt-3">Login</button>    
+        </form>
+        
+        <div class="text-center fs-6">
+            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+        </div>
     </div>
 </div>

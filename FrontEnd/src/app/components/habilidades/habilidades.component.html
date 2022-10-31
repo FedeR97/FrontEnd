@@ -1,99 +1,47 @@
-<div class="row">
-    <h1>Hard and Soft Skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [imageSrc]="'../assets/Html.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [outerStrokeColor]="'rgba(255, 75, 47, 1)'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="300"
-    ></circle-progress>
+<div class="conteiner">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="title">
+                <h1>Habilidades</h1>
+            </div>
+        </div>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [imageSrc]="'../assets/css.png'"
-        [showImage]="true"
-        [imageHeight]="100"
-        [imageWidth]="100"
-        [outerStrokeColor]="'rgba(45, 126, 255, 1)'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="300"
-    ></circle-progress>
+    <div class="row">
+    <div class="text-center col-xs-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let habilidad of habilidad">
+            <circle-progress
+                [percent]="habilidad.porcentaje"
+                [title]="(habilidad.nombre)"
+                [subtitle]="'habilidad.porcentaje'+ '%'"
+                [titleColor]="'white'"
+                [showTitle]="true"
+                [showUnits]="false"
+                [showImage]="false"
+                [radius]="100"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="4"
+                [outerStrokeColor]="'rgba(34, 139, 34, 1)'"
+                [outerStrokeGradient]="true"
+                [outerStrokeGradientStopColor]="'rgba(12,250,0,1)'"
+                [innerStrokeColor]="'white'"
+                [animation]="true"
+                [animationDuration]="300">
+            </circle-progress>
+            <div class="botones">
+                <button class="btn btn-outline-success" routerLink="/editHabilidad/{{habilidad.id}}" *ngIf="isLogged">
+                    <i class="bi bi-pencil-square"></i>EDITAR
+                </button>
+                <button class="btn btn-outline-danger" (click)="delete(habilidad.id)" *ngIf="isLogged">
+                    <i class="bi bi-trash2-fill"></i>BORRAR
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [imageSrc]="'../assets/Js.png'"
-        [showImage]="true"
-        [imageHeight]="110"
-        [imageWidth]="110"
-        [outerStrokeColor]="'rgba(249, 191, 34, 1)'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="300"
-    ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [imageSrc]="'../assets/communication.png'"
-        [showImage]="true"
-        [imageHeight]="110"
-        [imageWidth]="110"
-        [outerStrokeColor]="'rgba(70, 247, 51, 1)'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="300"
-    ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [imageSrc]="'../assets/Githubh.png'"
-        [showImage]="true"
-        [imageHeight]="170"
-        [imageWidth]="170"
-        [outerStrokeColor]="'rgba(138, 60, 164, 1)'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="300"
-    ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [imageSrc]="'../assets/English.png'"
-        [showImage]="true"
-        [imageHeight]="110"
-        [imageWidth]="110"
-        [outerStrokeColor]="'rgba(250, 250, 250, 1)'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="300"
-    ></circle-progress>
+
+    <div class="row">
+        <div class="nuevo">
+            <button type="button" class="btn btn-outline-success" routerLink="/nuevahabilidad" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i>
+                Agregar una nueva habilidad
+            </button>
+        </div>
     </div>
 </div>

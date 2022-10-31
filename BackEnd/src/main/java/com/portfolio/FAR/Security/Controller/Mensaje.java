@@ -4,7 +4,7 @@ package com.portfolio.FAR.Security.Controller;
 public class Mensaje {
     private String mensaje;
     
-    //construck
+    //constructor
 
     public Mensaje() {
     }

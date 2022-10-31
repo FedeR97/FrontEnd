@@ -1,15 +1,31 @@
-<div class="row">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/Persona.png" class="img-fluid" id="fotoPerfil">
+<div class="conteiner">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+            <div class="card">
+                <div class="foto">
+                    <img src={{persona?.img}} class="img-fluid" id="fotoPerfil">
+                </div>
+                <div class="nombre">
+                    <p>{{persona?.nombre}} {{persona?.apellido}}</p>
+                    <p>Full Stack Developer Jr.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+            <div class="title">
+                <h1><span style="--l: 'brillo';" >Acerca de Mi</span></h1>
+            </div>
+            <div class="descripcion">
+                <p>{{persona?.descripcion}}</p>
+            </div>
+        </div>
     </div>
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p id="nombre">{{persona.nombre}}{{persona.apellido}}</p>
-        <p>Full Stack Developer Jr</p>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-        <span>
-            <h1>Acerca de Mi</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt ipsum a eveniet reiciendis unde possimus, corrupti quam repellendus, earum accusamus odio non. Reprehenderit eaque assumenda odit ullam molestias provident saepe!</p>
-        </span>
+
+    <div class="row">
+        <div class="nuevo">
+            <button type="button" class="btn btn-outline-success" routerLink="/editacercade/1" ><i class="bi bi-pencil-square"></i>
+                EDITAR
+            </button>
+        </div>
     </div>
 </div>

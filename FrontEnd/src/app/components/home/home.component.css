@@ -1,0 +1,17 @@
+.contenedor{
+background-color: black;
+font-family: 'Roboto Slab', serif;
+}
+
+.modulo{
+    background-color: black;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+
+@media(min-width:768px){.header{
+    background: black;
+    position: sticky;
+    top: 0;
+    }
+}

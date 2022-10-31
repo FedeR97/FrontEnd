@@ -1,33 +1,37 @@
-<div class="row">
-    <h1>Experiencia Laboral</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <ul>
-            <li>
-                <h1>Trabajo 1</h1>
-                <h3>(years)</h3>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum illo blanditiis, odio aut itaque molestiae, et eaque consequatur sint provident sunt dicta deserunt, doloremque obcaecati dignissimos alias expedita quam!
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Trabajo 2</h1>
-                <h3>(years)</h3>
-            </li>
-            <p>
-               trabajo 2
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Trabajo 3</h1>
-                <h3>(years)</h3>
-            </li>
-            <p>
-                trabajo 3
-            </p>
-        </ul>
+<div class="conteiner">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="title">
+                <h1>Experiencia Laboral</h1>
+            </div>
+        </div>
+    </div>
+    <div id="experiencia" class="row" *ngFor="let Experiencia of expe">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                <h3>{{Experiencia.nombreE}}</h3>
+                <h6>{{Experiencia.fechaInicio}}  |  {{Experiencia.fechaFin}}</h6>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-6 col-lg-7">
+                <div class="descripcion">
+                    <p>{{Experiencia.descripcionE}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <div class="botones">
+                    <button class="btn btn-outline-success" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
+                        <i class="bi bi-pencil-square"></i>EDITAR
+                    </button>
+                    <button class="btn btn-outline-danger" (click)="delete(Experiencia.id)" *ngIf="isLogged">
+                        <i class="bi bi-trash2-fill"></i>BORRAR
+                    </button>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="nuevo">
+            <button type="button" class="btn btn-outline-success" routerLink="/nuevaexp" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i>
+                Agregar una Experiencia Laboral
+            </button>
+        </div>
     </div>
 </div>

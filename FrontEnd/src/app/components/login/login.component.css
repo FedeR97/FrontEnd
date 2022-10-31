@@ -5,22 +5,24 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: #ecf0f3;
+.contenedor{
+    background:linear-gradient(45deg,black,green);
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .wrapper {
     max-width: 350px;
-    min-height: 500px;
+    min-height: 450px;
     margin: 80px auto;
     padding: 40px 30px 30px 30px;
     background-color: #ecf0f3;
-    border-radius: 15px;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    border-radius: 45px;
+    box-shadow: inset 0 0 5px green,0 0 15px green,0 0 9px green;
 }
 
 .logo {
@@ -33,10 +35,7 @@ body {
     height: 80px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0px 0px 3px #5f5f5f,
-        0px 0px 0px 5px #ecf0f3,
-        8px 8px 15px #a7aaa7,
-        -8px -8px 15px #fff;
+    box-shadow: 0 0 3px #03520d, 0 0px 30px green, 10px 0 100px green
 }
 
 .wrapper .name {
@@ -74,7 +73,7 @@ body {
     box-shadow: none;
     width: 100%;
     height: 40px;
-    background-color: #03A9F4;
+    background-color: #028922;
     color: #fff;
     border-radius: 25px;
     box-shadow: 3px 3px 3px #b1b1b1,
@@ -83,17 +82,17 @@ body {
 }
 
 .wrapper .btn:hover {
-    background-color: #039BE5;
+    background-color: #04ac0c;
 }
 
 .wrapper a {
     text-decoration: none;
     font-size: 0.8rem;
-    color: #03A9F4;
+    color: #028922;
 }
 
 .wrapper a:hover {
-    color: #039BE5;
+    color: #04ac0c;
 }
 
 @media(max-width: 380px) {

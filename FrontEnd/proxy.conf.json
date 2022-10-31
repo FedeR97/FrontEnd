@@ -1,0 +1,8 @@
+{
+    "https://backendfar.herokuapp.com/*":{
+        "target":"https://backendfar.herokuapp.com/",
+        "secure": true,
+        "logLevel":"debug",
+        "changeOrigin":true
+    }
+}

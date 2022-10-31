@@ -1,33 +1,37 @@
-<div class="row">
-    <h1>Educacion</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <ul>
-            <li>
-                <h1>Educacion 1</h1>
-                <h3>(years)</h3>
-            </li>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum illo blanditiis, odio aut itaque molestiae, et eaque consequatur sint provident sunt dicta deserunt, doloremque obcaecati dignissimos alias expedita quam!
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Educacion 2</h1>
-                <h3>(years)</h3>
-            </li>
-            <p>
-               educacion 2
-            </p>
-        </ul>
-        <ul>
-            <li>
-                <h1>Educacion 3</h1>
-                <h3>(years)</h3>
-            </li>
-            <p>
-                educacion 3
-            </p>
-        </ul>
+<div class="conteiner">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="title">
+                <h1>Educación</h1>
+            </div>
+        </div>
+    </div>
+    <div id="educacion" class="row" *ngFor="let Educacion of educacion">
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+            <h3>{{Educacion.nombreE}}</h3>
+            <h6>{{Educacion.fechaInicio}}  |  {{Educacion.fechaFin}}</h6>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-6 col-lg-7">
+            <div class="descripcion">
+                <p>{{Educacion.descripcionE}}</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="botones">
+                <button id=editar class="btn btn-outline-success" routerLink="/editedu/{{Educacion.id}}" *ngIf="isLogged">
+                    <i class="bi bi-pencil-square"></i>EDITAR
+                </button>
+                <button id=borrar class="btn btn-outline-danger" (click)="delete(Educacion.id)" *ngIf="isLogged">
+                    <i class="bi bi-trash2-fill"></i>BORRAR
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="nuevo">
+            <button type="button" class="btn btn-outline-success" routerLink="/nuevaedu" *ngIf="isLogged"><i class="bi bi-plus-circle-fill"></i>
+                Agregar una nueva Educacion
+            </button>
+        </div>
     </div>
 </div>
