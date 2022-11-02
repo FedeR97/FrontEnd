@@ -28,7 +28,14 @@
     padding: 10px;
     margin: 5px;
 }
-.botones{
-    padding: 1px;
-    align-items: center;
+
+.imagen{
+    border-radius: 40px;
+    box-shadow: 0 0 10px green,0 0 10px green;
+    overflow: hidden;
+    margin: 40px;
+}
+
+.imagen img{
+    border-radius: 40px;
 }

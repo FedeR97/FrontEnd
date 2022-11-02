@@ -4,11 +4,9 @@ export class Proyectos {
     descripcion: string;
     img: string;
 
-    constructor(nombre: string,
-                descripcion: string,
-                img: string){
-                    this.nombre = nombre;
-                    this.descripcion = descripcion;
-                    this.img = img;
-                }
+    constructor(nombre: string,descripcion: string,img: string){
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.img = img;
+    }
 }
