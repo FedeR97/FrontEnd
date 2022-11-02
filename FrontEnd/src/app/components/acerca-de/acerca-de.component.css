@@ -36,7 +36,6 @@
     border-radius: 20px;
     box-shadow: 0 0 10px green,0 0 10px green;
     overflow: hidden;
-    
 }
 
 .foto img{
@@ -71,5 +70,5 @@
     box-shadow: 0 0 10px green,0 0 10px green;
     text-shadow: 0 0 5px green, 0 0 15px green, 0 0 30px green, 0 0 50px green;
     margin: 4px;
-    padding: 4px;
+    padding: 5px;
 }

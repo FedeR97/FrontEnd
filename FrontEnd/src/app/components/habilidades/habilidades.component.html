@@ -11,10 +11,9 @@
             <circle-progress
                 [percent]="habilidad.porcentaje"
                 [title]="(habilidad.nombre)"
-                [subtitle]="'habilidad.porcentaje'+ '%'"
+                [showSubtitle]="false"
                 [titleColor]="'white'"
                 [showTitle]="true"
-                [showUnits]="false"
                 [showImage]="false"
                 [radius]="100"
                 [outerStrokeWidth]="16"
@@ -24,7 +23,8 @@
                 [outerStrokeGradientStopColor]="'rgba(12,250,0,1)'"
                 [innerStrokeColor]="'white'"
                 [animation]="true"
-                [animationDuration]="300">
+                [animationDuration]="300"
+                >
             </circle-progress>
             <div class="botones">
                 <button class="btn btn-outline-success" routerLink="/editHabilidad/{{habilidad.id}}" *ngIf="isLogged">

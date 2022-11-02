@@ -28,3 +28,15 @@
     padding: 1px;
     align-items: center;
 }
+
+.botones btn{
+    box-shadow: 0 0 10px green,0 0 10px green;
+    text-shadow: 0 0 5px green, 0 0 15px green, 0 0 30px green, 0 0 50px green;
+    margin: 4px;
+    padding: 4px;
+}
+
+.btn {
+    padding: 5px;
+    margin: 4px;
+}

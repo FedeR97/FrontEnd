@@ -18,11 +18,16 @@
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
                 <div class="botones">
                     <button class="btn btn-outline-success" routerLink="/editproyecto/{{Proyectos.id}}" *ngIf="isLogged">
-                        <i class="bi bi-pencil-square"></i>EDITAR
+                        <i class="bi bi-pencil-square"></i> EDITAR
                     </button>
                     <button class="btn btn-outline-danger" (click)="delete(Proyectos.id)" *ngIf="isLogged">
                         <i class="bi bi-trash2-fill"></i>BORRAR
                     </button>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="imagen">
+                    <img src={{Proyectos?.img}} class="img-fluid" id="fotoProyecto">
                 </div>
             </div>
     </div>

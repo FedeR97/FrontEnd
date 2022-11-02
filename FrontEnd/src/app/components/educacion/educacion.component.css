@@ -23,21 +23,22 @@
 .nuevo{
     padding: 10px;
 }
-
 .educacion{
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
 }
 
-.row.botones.editar{
+.editar{
     box-shadow: 0 0 10px green,0 0 10px green;
     text-shadow: 0 0 5px green, 0 0 15px green, 0 0 30px green, 0 0 50px green;
     margin: 4px;
     padding: 4px;
 }
-.btn btn-outline-success{
-    box-shadow: 0 0 10px green,0 0 10px green;
-    text-shadow: 0 0 5px green, 0 0 15px green, 0 0 30px green, 0 0 50px green;
+
+.bi .bi-trash2-fill{
+    box-shadow: 0 0 10px rgb(184, 11, 5),0 0 10px rgb(202, 8, 2);
+}
+.btn {
+    padding: 5px;
     margin: 4px;
-    padding: 4px;
 }

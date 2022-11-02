@@ -29,6 +29,7 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { RegisterComponent } from './components/login/register.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
     NewHabilidadesComponent,
     EditAcercaDeComponent,
     NewProyectosComponent,
-    EditProyectosComponent
+    EditProyectosComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
