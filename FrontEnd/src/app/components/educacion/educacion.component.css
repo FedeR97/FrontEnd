@@ -38,3 +38,7 @@
 .bi .bi-trash2-fill{
     box-shadow: 0 0 10px rgb(184, 11, 5),0 0 10px rgb(202, 8, 2);
 }
+.btn {
+    padding: 5px;
+    margin: 4px;
+}
