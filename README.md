@@ -1,11 +1,15 @@
-# Bienvenidos al Readme :wave: #
+# Bienvenidos :wave: #
 
-En mi repositorio podran encontrar mi proyecto para Argentina Programa:computer:, dividido en dos partes(BackEnd y FrontEnd).
-Si algunos de los que me evaluan notan que no hice tantos tags y branchs en mi proyecto sepan disculpar se podria decir que nunca hubo una rama para actualizar siempre fue la master a mejorar.:sweat_smile:
+Este es mi proyecto para Argentina Programa:computer:, dividido en dos partes(BackEnd y FrontEnd).
+El mismo es un portfolio web diseñado con Angular, springboot, mySQL, entre otras tecnologias. El mismo puede ser visualizado en la siguiente URL: https://frontendfar.web.app/
 
+Este proyecto esta sujeto a modificaciones y/o actualizaciones (Y esperemos que siempre lo este para mejorar :fist_raised:).
 
 Pueden encontrarme en mis redes para contactarme:thought_balloon:
 
-Fede6365@gmail.com:e-mail:
-https://www.facebook.com/borys21 :man:
-https://www.instagram.com/rodrigueez.fedee/:camera:
+
+:e-mail: Fede6365@gmail.com
+
+:man: https://www.facebook.com/borys21 
+
+:camera: https://www.instagram.com/rodrigueez.fedee/ 
